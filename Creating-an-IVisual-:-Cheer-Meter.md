@@ -24,7 +24,39 @@ What did we do here? We created an SVG element, and two text elements. These tex
 
 Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example the report canvas uses this to determine which visuals it can switch between. Q&A uses capabilities, to best match natural language results to visualizations it should display. 
 
-`// CONTENT MISSING`
+```typescript
+public static capabilities: VisualCapabilities = {
+  dataRoles: [
+               {
+                 name: 'Category',
+                 kind: VisualDataRoleKind.Grouping,
+                 displayName: data.createDisplayNameGetter('Role_DisplayName_Axis'),
+               }, {
+                    name: 'Y',
+                    kind: VisualDataRoleKind.Measure,
+                    displayName: data.createDisplayNameGetter('Role_DisplayName_Value'),
+                },
+             ],
+             dataViewMappings: [{
+               conditions: [
+                 { 'Category': { max: 1 }, 'Y': { max: 1 }, },
+                ],
+                categorical: {
+                    categories: {
+                        for: { in: 'Category' },
+                        dataReductionAlgorithm: { top: {} }
+                    },
+                    values: {
+
+                    },
+                    rowCount: { preferred: { min: 2 }, supported: { min: 0 } }
+                },
+            }],
+            sorting: {
+                default: {},
+            },
+};
+```
 
 ####Step Three : Converter
 
