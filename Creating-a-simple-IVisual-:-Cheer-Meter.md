@@ -2,7 +2,7 @@
 
 We are going to skip over the overly simplified 'Hello World' type example, and teach you how to create a meaningful visualization from the get go. This way you will get a surface introduction on all the capabilities you can build into your visual. 
 
-Let's learn how to create a 'cheer meter'. A cheer meter is a visual that will contain two pieces of text that will be side by side, and their individual vertical displacement will be determined by the data. One use-case of this visual is to visualize cheer volume of two teams of supporters, and put the team name of the louder group on top.
+Let's learn how to create a 'cheer meter'. A cheer meter will contain two pieces of text that will be side by side, and their individual vertical displacement will be determined by the data. One use-case of this visual is to visualize cheer volume of two teams of supporters, and put the team name of the louder group on top.
 
 ####Step One : Implementing Init
 
