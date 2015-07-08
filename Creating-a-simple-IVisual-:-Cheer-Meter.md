@@ -9,7 +9,7 @@ Today, you will learn how to create a cheer meter. A cheer meter is a visual tha
 First thing you will need is to implement the `init(options)' function. As you will recall, this is where we get the element to draw into, and a place to setup some static DOM.
 
 ```typescript
-public init(options: VisualInitOptions) {
+public init(options: VisualInitOptions):void {
   this.element = options.element;
   this.viewport = options.viewport;          
   var svg = this.svg = d3.select(this.element.get(0)).append('svg');
