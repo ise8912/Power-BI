@@ -90,6 +90,8 @@ private draw(data: CheerData, duration: number, viewport: IViewport){
 }
 ```
 
+Don't worry too much about the hard-coded colors. In Part 2, we will leverage the format information to color the text.
+
 ####Step Five : Destroy
 
 Here just free up any javascript objects & other resources
