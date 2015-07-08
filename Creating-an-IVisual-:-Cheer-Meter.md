@@ -106,4 +106,16 @@ public destroy(): void {
 }
 ```
 
+####Final Step : Plugin
+
+A plugin allows this new visualization to be registered with Power BI.
+
+```typescript
+export var cheerMeter: IVisualPlugin = {
+  name: 'cheerMeter',
+  capabilities: CheerMeter.capabilities,
+  create: () => new CheerMeter()
+};
+```
+
 Done! :) Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
