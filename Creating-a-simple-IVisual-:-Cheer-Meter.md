@@ -32,11 +32,11 @@ Now that we have established our capabilities, we need to write a method that wi
 
 ```typescript
 
-private interface TeamData{
+private interface TeamData {
   name: string;
   volume: number;
 }
-private interface CheerData{
+private interface CheerData {
   teamA: TeamData;
   teamB: TeamData;
 }
@@ -56,7 +56,7 @@ public update(options: VisualUpdateOptions): void {
   this.draw(data, options.duration, options.viewport);
 }
 
-private draw(data: CheerData, duration: number, viewport: IViewport){
+private draw(data: CheerData, duration: number, viewport: IViewport) {
   var easeName = 'back'
   var textOne = this.textOne;
   var textTwo = this.textTwo;
@@ -99,12 +99,11 @@ Don't worry too much about the hard-coded colors. In Part 2, we will leverage th
 Here just free up any javascript objects & other resources
 
 ```typescript
-  public destroy(): void {
-    this.element = null;
-    this.svg = null;
-    this.textOne = null;
-    this.textTwo = null;
-  }
+public destroy(): void {
+  this.element = null;
+  this.svg = null;
+  this.textOne = this.textTwo = null;
+}
 ```
 
 Done! :) Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-a-simple-IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
