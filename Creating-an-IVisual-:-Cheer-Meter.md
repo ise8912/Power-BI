@@ -106,4 +106,4 @@ public destroy(): void {
 }
 ```
 
-Done! :) Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-a-simple-IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
+Done! :) Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an=IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
