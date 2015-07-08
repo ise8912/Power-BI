@@ -45,3 +45,47 @@ public static converter(dataView: DataView): CheerData {
 ```
 
 ####Step Four : Implementing Update
+
+Now we move to the core method of the visual. Update is were all the magic happens. Using our freshly converted cheerdata, we are now going to draw the visual.
+
+```typescript
+        public update(options: VisualUpdateOptions): void {
+            var data = this.converter(options.dataviews[0]);
+            this.draw(data, options.duration, options.viewport);
+        }
+
+        private draw(data: CheerData, duration: number, viewport: IViewport){
+            var easeName = 'back'
+            var textOne = this.textOne;
+            var textTwo = this.textTwo;
+            
+            // Resize the SVG
+            this.svg
+            	.attr('height',this.viewport.height)
+            	.attr('width', this.viewport.width);
+            
+            textOne
+                .style('fill','#A5ACAF')
+                .text(data.teamA.name);
+                
+            hawkText
+                 .style('fill','#69BE28')
+                 .text(data.teamB.name);
+            
+            seaText.transition()
+                .duration(duration)
+                .ease(easeName)
+                .attr({
+                    y:data.teamA.volume, //TODO: Normalize
+                    x:30 //TODO: measure
+                });
+                
+            hawkText.transition()
+                .duration(duration)
+                .ease(easeName)
+                .attr({
+                    y:data.teamB.volume, //TODO: Normalize
+                    x:280 //TODO: measure
+                });
+        }
+```
