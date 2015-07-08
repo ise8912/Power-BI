@@ -10,7 +10,7 @@ First thing you will need is to implement the `init(options)' function. As you w
 
 ```typescript
 public init(options: VisualInitOptions):void {         
-  var svg = this.svg = d3.select(this.element.get(0)).append('svg');
+  var svg = this.svg = d3.select(options.element.get(0)).append('svg');
             
   this.textOne = svg.append('text');    
   this.textTwo = svg.append('text');
