@@ -4,7 +4,7 @@ IVisual is an interface that the Power BI Visual hosts expect all its visualizat
 
 #### Life cycle
 
-<Image>
+// ADD IMAGE HERE
 
 As you can see from this simplistic diagram, you only really need to implement the three key methods to create a visualization that will work with Power BI. 
 
