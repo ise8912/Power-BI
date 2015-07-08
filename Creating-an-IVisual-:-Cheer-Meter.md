@@ -34,7 +34,7 @@ Now that we have established our capabilities, we need to write a method that wi
 
 private interface TeamData {
   name: string;
-  volume: number;
+  value: number;
 }
 
 private interface CheerData {
@@ -47,8 +47,8 @@ public static converter(dataView: DataView): CheerData {
   var values = dataView.categorical.values;
 
   var data = { 
-               teamA: { name: catValues[0], volume: values[0] }, 
-               teamB: { name: catValues[1], volume: values[1] } 
+               teamA: { name: catValues[0], value: values[0] }, 
+               teamB: { name: catValues[1], value: values[1] } 
              };
 
   return data;
