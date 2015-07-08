@@ -89,3 +89,16 @@ private draw(data: CheerData, duration: number, viewport: IViewport){
     });
 }
 ```
+
+####Step Five : Destroy
+
+Here just free up any javascript objects & other resources
+
+```typescript
+  public destroy(): void {
+    this.element = null;
+    this.svg = null;
+    this.textOne = null;
+    this.textTwo = null;
+  }
+```
