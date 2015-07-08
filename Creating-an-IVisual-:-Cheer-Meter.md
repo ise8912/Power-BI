@@ -27,34 +27,31 @@ Every visual needs to define its capabilities. This is the visual's way of letti
 ```typescript
 public static capabilities: VisualCapabilities = {
   dataRoles: [
-               {
-                 name: 'Category',
-                 kind: VisualDataRoleKind.Grouping,
-                 displayName: data.createDisplayNameGetter('Role_DisplayName_Axis'),
-               }, {
-                    name: 'Y',
-                    kind: VisualDataRoleKind.Measure,
-                    displayName: data.createDisplayNameGetter('Role_DisplayName_Value'),
-                },
-             ],
-             dataViewMappings: [{
-               conditions: [
-                 { 'Category': { max: 1 }, 'Y': { max: 1 }, },
-                ],
-                categorical: {
-                    categories: {
-                        for: { in: 'Category' },
-                        dataReductionAlgorithm: { top: {} }
-                    },
-                    values: {
-
-                    },
-                    rowCount: { preferred: { min: 2 }, supported: { min: 0 } }
-                },
-            }],
-            sorting: {
-                default: {},
-            },
+    {
+      name: 'Category',
+      kind: VisualDataRoleKind.Grouping,
+      displayName: data.createDisplayNameGetter('Role_DisplayName_Axis'),
+    }, 
+    {
+      name: 'Y',
+      kind: VisualDataRoleKind.Measure,
+      displayName: data.createDisplayNameGetter('Role_DisplayName_Value'),
+     },
+   ],
+ dataViewMappings: [{
+   conditions: [{ 'Category': { max: 1 }, 'Y': { max: 1 }, },],
+   categorical: {
+     categories: {
+       for: { in: 'Category' },
+       dataReductionAlgorithm: { top: {} }
+     },
+     values: {},
+     rowCount: { preferred: { min: 2 }, supported: { min: 0 } }
+   },
+  }],
+  sorting: {
+    default: {},
+  },
 };
 ```
 
