@@ -36,10 +36,12 @@ private interface TeamData {
   name: string;
   volume: number;
 }
+
 private interface CheerData {
   teamA: TeamData;
   teamB: TeamData;
 }
+
 public static converter(dataView: DataView): CheerData {
   var catValues = dataView.categorical.categories[0].values;
   var values = dataView.categorical.values;
