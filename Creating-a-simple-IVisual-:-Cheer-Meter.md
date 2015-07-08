@@ -24,6 +24,8 @@ What did we do here? We created an SVG element, and two text elements. These tex
 
 Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example the report canvas uses this to determine which visuals it can switch between. Q&A uses capabilities, to best match natural language results to visualizations it should display. 
 
+`// CONTENT MISSING`
+
 ####Step Three : Converter
 
 Now that we have established our capabilities, we need to write a method that will convert the DataView to our own internal view model. Even though not enforced via the interface, it is recommended that you always convert the DataView to a your very own viewmodel. This will ensure you have the best representation of your view in object form, and if we make changes to the DataView structure in the future, your visual only has one function it needs to update in order to work with the new format.  
