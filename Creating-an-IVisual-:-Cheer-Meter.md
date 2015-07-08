@@ -41,8 +41,15 @@ private interface CheerData {
   teamB: TeamData;
 }
 public static converter(dataView: DataView): CheerData {
-  // TODO
-  return null;
+  var catValues = dataView.categorical.categories[0].values;
+  var values = dataView.categorical.values;
+
+  var data = { 
+               teamA: { name: catValues[0], volume: values[0] }, 
+               teamB: { name: catValues[1], volume: values[1] } 
+             };
+
+  return data;
 }
 ```
 
