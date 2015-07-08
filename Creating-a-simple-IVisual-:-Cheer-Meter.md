@@ -30,7 +30,7 @@ Now that we have established our capabilities, we need to write a method that wi
 
 ```typescript
 
-private TeamData{
+private interface TeamData{
   name: string;
   volume: number;
 }
