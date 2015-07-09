@@ -1,17 +1,10 @@
 ####What is a DataView?
 
-DataView is the format in which Power BI provides data to its visual. It not only contains data values, but is also a vessel that carries formatting/color information. The DataView has five main views of data that can be used by various visualizations. They are single, categorical, tree, table & matrix. 
+DataView is a JavaScript object model for canonical representations of data. An important fact about DataView it is not JSON (includes some objects like JavaScript Dates, and is an object graph with cross-references) and supports multiple, simple, canonical views of the same data, giving visualizations the freedom to pick their preferred mental model.
 
-####Single
-
-This is the simplest dataview type, and it used to denote one value.
-
-####Categorical
-
-####Tree
-
-####Table
-
-####Matrix
-
-####DataView Metadata 
+The canonical DataView structures are:
+* Categorical
+* Table
+* Tree
+* Matrix
+* Single
