@@ -30,8 +30,14 @@ Every visual needs to define its capabilities. This is the visual's way of letti
 ```typescript
 export var cheerMeterProps = {
 	dataPoint: {
-		defaultColor: <DataViewObjectPropertyIdentifier>{ objectName: 'dataPoint', propertyName: 'defaultColor' },
-		fill: <DataViewObjectPropertyIdentifier>{ objectName: 'dataPoint', propertyName: 'fill' },
+		defaultColor: <DataViewObjectPropertyIdentifier>{
+			objectName: 'dataPoint',
+			propertyName: 'defaultColor'
+		},
+		fill: <DataViewObjectPropertyIdentifier>{
+			objectName: 'dataPoint',
+			propertyName: 'fill'
+		},
 	},
 };
 
