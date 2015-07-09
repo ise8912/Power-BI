@@ -5,9 +5,9 @@ IVisual is an interface that the Power BI Visual hosts expect all its visualizat
 #### Life cycle
 
 ```
-             -----------------
-            |                 |
- ------     |    --------     v   -------
+             ----------------
+            |                |
+ ------     |    --------    v    -------
 |init()|  ----) |update()| ----) |destroy|
  ------          --------         -------
 ```
