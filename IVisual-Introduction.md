@@ -18,3 +18,5 @@ As you can see from this simplistic diagram, you only really need to implement t
 * `update(options: VisualUpdateOptions): void` - Whenever the host has an update to the viewport, data or style, it will call this method to notify the visual. It is the visual's responsibility to figure out what exactly has changed. *Please be careful not to recreate DOM on each call of update*.
 
 * `destroy(): void` - Called when the visual is about to be disposed. Here the visual should null out any resources, to avoid memory leaks.
+
+**You will notice some visuals implement onDataChanged() & onResizing(), this will be deprecated in the future to provide for a simpler & more predictable update model **
