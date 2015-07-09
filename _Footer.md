@@ -1,1 +1,1 @@
-This documentation is still work in progress.
+Note: This document is not complete and is work in progress.
