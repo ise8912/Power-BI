@@ -167,16 +167,7 @@ This is the complete example created from the steps above
     <title></title>
 
     <link href="visuals.min.css" rel="stylesheet">
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js"></script>
-
-    <script type="text/javascript" src="utility.min.js"></script>
-    <script type="text/javascript" src="data.min.js"></script>
-    <script type="text/javascript" src="visuals.min.js"></script>
-    <script type="text/javascript" src="singleVisualHostService.js"></script>
+    <script type="text/javascript" src="allInOne.js"></script>
     <style>
         .visual {
             'background-color' : 'white',
