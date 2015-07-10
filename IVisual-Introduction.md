@@ -19,4 +19,4 @@ As you can see from the diagram above, you only need to implement these three ke
 
 * `destroy(): void` - Called when the visual is about to be disposed. Here the visual should null out any resources, to avoid memory leaks.
 
-**You will notice some visuals implement onDataChanged() and onResizing(), this will be deprecated in the future to provide for a simpler & more predictable update model. Please use update instead when building new visuals**
+**You will notice some visuals implement onDataChanged() and onResizing(), this will be deprecated in the future to provide for a simpler and more predictable update model. When building new visuals, please use update() **
