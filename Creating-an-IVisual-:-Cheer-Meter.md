@@ -22,12 +22,12 @@ public init(options: VisualInitOptions): void {
 }
 ```
 
-What did we do here? We created an SVG element, and two text elements. These text elements we will position when data comes in. 
+What did we do here? We created an SVG element, and two text elements. These text elements will position when data comes in. 
 
 
 ####Step Two : Capabilities
 
-Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example the report canvas uses this to determine which visuals it can switch between. Power BI Q&A uses capabilities to best match natural language results to visualizations it should display. 
+Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example, the report canvas uses this to determine which visuals it can switch between. Power BI Q&A uses capabilities to best match natural language results to visualizations it should display. 
 
 ```typescript
 export var cheerMeterProps = {
