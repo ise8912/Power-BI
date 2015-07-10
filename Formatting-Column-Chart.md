@@ -91,4 +91,4 @@ var dataView = {
     }
 };
 ```
-for a full list of formatting types for line charts, please refer to it's capabilities (Add link to capabilities).
+For a full list of formatting types for line charts, please refer to it's capabilities.
