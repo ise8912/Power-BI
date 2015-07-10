@@ -1,6 +1,6 @@
 #### What is an IVisual?
 
-IVisual is an interface that the Power BI visual hosts expect all its visualizations to implement. 
+IVisual is an interface that Power BI implements to host all its visualizations.
 
 #### Life cycle
 
@@ -11,7 +11,7 @@ IVisual is an interface that the Power BI visual hosts expect all its visualizat
 |init()|  ----) |update()| ----) |destroy|
  ------          --------         -------
 ```
-As you can see from this simplistic diagram, you only really need to implement the three key methods to create a visualization that will work with Power BI. 
+As you can see from the diagram above, you only need to implement these three key methods to create a visualization that will work with Power BI. 
 
 * `init(options: VisualInitOptions): void`- This is called when the visual is first created. The host will pass into the visual the element it will draw itself into. The host also passes into it some configuration options along with services that are needed by the visual. It is recommended that you do not create any UI in this call, unless you are creating a one time DOM structure.
 
