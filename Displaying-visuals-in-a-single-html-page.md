@@ -9,9 +9,9 @@
 
 Dataviews are what power the visual, they not only contain the data values for the visual, 
 but also provide format information about the visuals such as legends, axis, colors, etc. 
-For more information on DataView refer to <link>
+For more information on DataView refer to [DataView Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction).
 
-Here is an example of how to create one
+Here is an example of how to create a DataView:
 
 ```javascript
 var createDataView = function () {
@@ -84,7 +84,7 @@ var createDataView = function () {
 
 ### Create some default styles
 
-Our visuals depend on the host to provide them with information about some of the basic syles and colors.
+Power BI visuals depend on the host to provide them with information about some of the basic styles and colors.
 Here is how you can create some default styles.
 
 ```javascript
@@ -114,8 +114,8 @@ function createDefaultStyles(){
 
 ### Getting a plugin
 
-Our visuals are created via a plugin service. The service eunmerates plugins in a system, and also 
-constructs them in a particular flavour. In this example we will use the default service to create a line chart.
+Power BI visuals are created via a plugin service. The service enumerates plugins in a system, and also 
+constructs them. In this example we will use the default service to create a line chart.
 
 ```javascript
 var pluginService = powerbi.visuals.visualPluginFactory.create();
@@ -126,11 +126,11 @@ var visual = pluginService.getPlugin('columnChart').create();
 
 Once you have created a visual, you will need to initialize it. In this process you will pass into the visual
 some properties, services, and the element that it should render into. Subsequently you will call update on the 
-visual each time you have new data/formatting information/styles avaliable.
+visual each time you have new data/formatting information/styles available.
 
 ```javascript
 visual.init({
-    // empty dom element the visual should attach to.
+    // empty DOM element the visual should attach to.
     element: element,
     // host services
     host: singleVisualHostServices,
@@ -283,7 +283,7 @@ This is the complete example created from the steps above
         var visual = pluginService.getPlugin('columnChart').create();
 
         visual.init({
-            // empty dom element the visual should attach to.
+            // empty DOM element the visual should attach to.
             element: element,
             // host services
             host: singleVisualHostServices,
