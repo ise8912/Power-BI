@@ -1,6 +1,6 @@
 #### What is an IVisual?
 
-IVisual is an interface that Power BI implements to host all its visualizations.
+IVisual is an interface that the Power BI visual hosts expects all its visualizations to implement.
 
 #### Life cycle
 
