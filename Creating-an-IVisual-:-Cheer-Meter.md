@@ -199,4 +199,6 @@ export var cheerMeter: IVisualPlugin = {
 };
 ```
 
-Done! :) Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
+Done! :) 
+Now you can should try to host the visual.  Follow the steps in [Displaying visuals in a single html page](https://github.com/Microsoft/PowerBI-visuals/wiki/Displaying-visuals-in-a-single-html-page).
+Check out [Part 2](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter-Part-2) to see how you can enable formatting for your visual.
