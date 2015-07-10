@@ -4,7 +4,7 @@ We are going to skip over the overly simplified 'Hello World' type example, and 
 
 Let's learn how to create a 'cheer meter'. A cheer meter will contain two pieces of text that will be side by side, and their individual vertical displacement will be determined by the data. One use-case of this visual is to visualize cheer volume of two teams of supporters, and put the team name of the louder group on top.
 
-[Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html) select the cheerMeter from the dropdown menu.
+[Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html) select the 'cheerMeter' from the dropdown menu.
 
 ####Step One : Implementing Init
 
