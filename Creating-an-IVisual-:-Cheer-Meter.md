@@ -1,6 +1,6 @@
 #### What are we going to make?
 
-We are going to skip over the overly simplified 'Hello World' type example, and teach you how to create a meaningful visualization from the get go. This way you will get a surface introduction on all the capabilities you can build into your visual. 
+We are going to skip over the overly simplified 'Hello World' type example, and teach you how to create a meaningful visualization from the get go. This way you will get a high-level introduction on all the capabilities you can build into your visual. 
 
 Let's learn how to create a 'cheer meter'. A cheer meter will contain two pieces of text that will be side by side, and their individual vertical displacement will be determined by the data. One use-case of this visual is to visualize cheer volume of two teams of supporters, and put the team name of the louder group on top.
 
@@ -25,7 +25,7 @@ What did we do here? We created an SVG element, and two text elements. These tex
 
 ####Step Two : Capabilities
 
-Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example the report canvas uses this to determine which visuals it can switch between. Q&A uses capabilities, to best match natural language results to visualizations it should display. 
+Every visual needs to define its capabilities. This is the visual's way of letting the system know what it is capable of showing. This information is leveraged by various components of the system. For example the report canvas uses this to determine which visuals it can switch between. Power BI Q&A uses capabilities to best match natural language results to visualizations it should display. 
 
 ```typescript
 export var cheerMeterProps = {
@@ -122,7 +122,7 @@ public static converter(dataView: DataView): CheerData {
 
 ####Step Four : Implementing Update
 
-Now we move to the core method of the visual. Update is were all the magic happens. Using our freshly converted cheerdata, we are now going to draw the visual.
+Now we move to the core method of the visual. Update is where all the magic happens. Using our freshly converted cheerdata, we are now going to draw the visual.
 
 ```typescript
 public update(options: VisualUpdateOptions): void {
