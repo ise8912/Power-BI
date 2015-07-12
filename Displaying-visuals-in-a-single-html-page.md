@@ -2,7 +2,7 @@
 
 ```html
 <link href="visuals.min.css" rel="stylesheet">
-<script type="text/javascript" src="allInOne.js"></script>
+<script type="text/javascript" src="powerbi-visuals.all.min.js"></script>
 ```
 
 ### Create a DataView
