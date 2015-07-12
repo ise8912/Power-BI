@@ -167,7 +167,7 @@ This is the complete example created from the steps above
     <title></title>
 
     <link href="visuals.min.css" rel="stylesheet">
-    <script type="text/javascript" src="allInOne.js"></script>
+    <script type="text/javascript" src="powerbi-visuals.all.min.js"></script>
     <style>
         .visual {
             'background-color' : 'white',
