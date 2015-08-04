@@ -128,7 +128,7 @@ Now we move to the core method of the visual. Update is where all the magic happ
 
 ```typescript
 public update(options: VisualUpdateOptions): void {
-  var data = this.converter(options.dataviews[0]);
+  var data = CheerMeter.converter(options.dataViews[0]);
   this.draw(data, options.duration, options.viewport);
 }
 
