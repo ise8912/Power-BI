@@ -189,7 +189,7 @@ public destroy(): void {
 
 ####Final Step : Plugin
 
-A plugin allows this new visualization to be registered with Power BI.
+A plugin allows this new visualization to be registered with Power BI. Add the following to the plugins.ts file located at .\PowerBI-visuals\src\Clients\Visuals\plugins.ts
 
 ```typescript
 export var cheerMeter: IVisualPlugin = {
