@@ -7,6 +7,7 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 4. [Creating an IVisual : Cheer Meter](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter)
 5. [Adhering to common themes and styles](https://github.com/Microsoft/PowerBI-visuals/wiki/Adhering-to-common-themes-and-styles)
 6. [Minimum requirements for implementing a new visual](https://github.com/Microsoft/PowerBI-visuals/wiki/Minimum-requirements-for-implementing-a-new-visual)
+7. [Performance requirements](https://github.com/Microsoft/PowerBI-visuals/wiki/Performance-requirements)
 
 ### Running Visuals in a single page html
 1. [Basics] (https://github.com/Microsoft/PowerBI-visuals/wiki/Displaying-visuals-in-a-single-html-page)
