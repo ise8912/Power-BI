@@ -134,7 +134,7 @@ module Bar {
 } 
 ``` 
 ##### DO: Always specify a return type for functions 
-If a function doesn't return anything, explicitly specify that it returns void. 
+If a function doesn't return anything, explicitly specify that it returns **void**. 
  
 **Good** 
 ``` 
@@ -179,7 +179,7 @@ public setRGB(rgb: RGB): void {
 setRGB({r: 255, g: 255, b: 255}); 
 ``` 
 **Bad** 
- 
+``` 
 class rgb { 
 public r: number; 
 public g: number; 
@@ -198,15 +198,15 @@ import algorithms = BI.Common.Algorithms;
 var find_if = algorithms.find_if; 
   
 export function foo() { 
-var scopeValues1 = find_if(values, filter, i, n); 
-var scopeValues2 = find_if(values, filter, i, m);        
+    var scopeValues1 = find_if(values, filter, i, n); 
+    var scopeValues2 = find_if(values, filter, i, m);        
 } 
 ```  
 **Bad** 
 ```  
 export function foo() { 
-var scopeValues1 = BI.Common.Algorithms.find_if(values, filter, i, n); 
-var scopeValues2 = BI.Common.Algorithms.find_if(values, filter, i, m);   
+    var scopeValues1 = BI.Common.Algorithms.find_if(values, filter, i, n); 
+    var scopeValues2 = BI.Common.Algorithms.find_if(values, filter, i, m);   
 } 
 ``` 
  
