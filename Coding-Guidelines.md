@@ -214,7 +214,7 @@ export function foo() {
 ##### DO: Add a copyright declaration at the top of all files 
 The Copyright declaration in code is a Microsoft requirement. 
  
-**Example** 
+**[Example](https://github.com/Microsoft/PowerBI-visuals/blob/master/LICENSE)** 
 ``` 
  /*
  *  Power BI Visualizations
