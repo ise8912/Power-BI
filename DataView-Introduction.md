@@ -12,21 +12,26 @@ The canonical DataView structures are:
 
 When the visual receives the dataview via the update method it contains some metadata along with all the canonical views that it can be represented in like categorical, table .. etc. 
 
-The *metadata* contains information about the various columns, like their type (categorical or scalar), what sort of format strings that apply to its values, and also static formatting options like background color, legend position etc. [PICTURE HERE]
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/dataview_metadata.PNG)
+
+The *metadata* contains information about the various columns, like their type (categorical or scalar), what sort of format strings that apply to its values, and also static formatting options like background color, legend position etc.
 
 ####Categorical Dataview
 
 Its is the 'workhorse' dataview, since it is used by most of the visuals (column/bar, line, treemap, map, etc.)
 Data here is organized into columns, with arrays of data.
-[BAR CHART PICTURE]
-[Picture of the dataview]
+
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/categorical_column_chart.PNG)
+
+For example, this column chart's data would like this in the dataview. 
+
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/categorical_diagram.PNG)
 
 ####Table Dataview
 
 This is a classic table, with a good old rectangular datasets, good to representing well .. a table.
 
-[TABLE Picture]
-[Picture of the dataview]
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/table_dv_diagram.PNG)
 
 ####Tree
 
