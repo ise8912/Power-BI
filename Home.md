@@ -3,7 +3,7 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 ### Writing new visuals
 1. [IVisual Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/IVisual-Introduction)
 2. [DataView Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
-3. [Capabilities & Formatting Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities-Introduction)
+3. [Capabilities & Formatting Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities-&-Formatting-Introduction)
 4. [Creating an IVisual : Cheer Meter](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter)
 
 ### Running Visuals in a single page html
