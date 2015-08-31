@@ -1,6 +1,6 @@
 Here are a few links to get you started. If you are new to Powerbi-visuals, we recommend that you read these in order.
 
-### Writing new visuals
+### Getting Started
 1. [IVisual Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/IVisual-Introduction)
 2. [DataView Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
 3. [Capabilities & Formatting Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities-&-Formatting-Introduction)
