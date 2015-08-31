@@ -4,10 +4,11 @@ First, let's make sure that we've configured Chrome correctly.
 Hit F12 to launch the Chrome Dev Tools, open settings pane and make sure JS Source map is ticked.
 [PNG]
 
-Open PowerBI visuals project in visual studio 2015(Please read .... first), Hit Ctrl+F5 to launch PowerBIVisualsPlayground.
+Run PowerBI visuals project in visual studio 2015(If you don't know how, follow instructions here: [Run Sample App](https://github.com/Microsoft/PowerBI-visuals)), Hit Ctrl+F5 to launch PowerBIVisualsPlayground.
 
-Navigate to source file, pick the ts file you want to debug.
+In Chrome Browser, hit F12. Navigate to source file, pick the ts file you want to debug.
 [PNG]
 Search for where you want to set your breakpoint.
 [PNG]
 Hit continue and start debugging. And that's it.
+
