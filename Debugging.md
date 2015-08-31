@@ -11,7 +11,7 @@ Run PowerBI visuals project in visual studio 2015(If you don't know how, follow 
 
 ![playground](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/debugging/playground.png)
 
-Open Chrome Dev Tools
+Once playground is up, open Chrome Dev Tools.
 
 ###Inspecting the DOM and styles###
 Select Elements tab and inspect any elements inside the DOM tree.
