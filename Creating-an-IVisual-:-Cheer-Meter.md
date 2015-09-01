@@ -83,40 +83,64 @@ export interface TeamData {
 	name: string;
 	value: number;
 	color: string;
+	identity: data.Selector;
 }
 
 export interface CheerData {
 	teamA: TeamData;
 	teamB: TeamData;
+	background: string;
 }
 
 public static converter(dataView: DataView): CheerData {
-	var catValues = dataView.categorical.categories[0].values;
+	var cat = dataView.categorical.categories[0];
+	var catValues = cat.values;
 	var values = dataView.categorical.values[0].values;
 	var objects = dataView.categorical.categories[0].objects;
+	var object1 = objects && objects.length > 0 ? objects[0] : undefined;
+	var object2 = objects && objects.length > 1 ? objects[1] : undefined;
+	var metadataObjects = dataView.metadata.objects;
+	var backgroundColor = CheerMeter.DefaultBackgroundColor;
+	if (metadataObjects) {
+		var general = metadataObjects['general'];
+		if (general) {
+			var fill = <Fill>general['fill'];
+			if (fill) {
+				backgroundColor = fill.solid.color;
+			}
+		}
+	}
 
 	var color1 = DataViewObjects.getFillColor(
-		objects[0],
+		object1,
 		cheerMeterProps.dataPoint.fill,
 		CheerMeter.DefaultFontColor);
 
 	var color2 = DataViewObjects.getFillColor(
-		objects[1],
+		object2,
 		cheerMeterProps.dataPoint.fill,
 		CheerMeter.DefaultFontColor);
 
+	var categoryIdentities = cat.identity;
+	var idn1 = categoryIdentities ? SelectionId.createWithId(categoryIdentities[0], 
+		/* highlight */ false) : SelectionId.createNull();
+	var idn2 = categoryIdentities ? SelectionId.createWithId(categoryIdentities[1], 
+		/* highlight */ false) : SelectionId.createNull();
 	var data = {
 		teamA: {
 			name: catValues[0],
 			value: values[0],
-			color: color1
+			color: color1,
+			identity: idn1.getSelector()
 		},
 		teamB: {
-				name: catValues[1],
-				value: values[1],
-				color: color2
-			}
-		};
+			name: catValues[1],
+			value: values[1],
+			color: color2,
+			identity: idn2.getSelector()
+		},
+		background: backgroundColor
+	};
 
 	return data;
 }
