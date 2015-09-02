@@ -4,7 +4,7 @@ Hello IVisual aims to kick start your journey to creating exciting new visualiza
 
 The visual will display a text field in the center of it, and it will be driven of the first category or row values in the dataview.
 
-[Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html?visual=helloIVisual) of this visual
+[Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html?visual=helloIVisual) of this visual. Full code is [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Visuals/visuals/samples/helloIVisual.ts).
 
 ####Step One : Init
 
