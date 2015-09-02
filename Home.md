@@ -5,6 +5,7 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 2. [DataView - Lifebood of Power BI visuals](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
 3. [Capabilities](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities)
 4. [Creating an IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/Hello-IVisual)
+5. [Debugging](https://github.com/Microsoft/PowerBI-visuals/wiki/Debugging)
 
 ### Running Visuals in a single page html
 1. [Basics] (https://github.com/Microsoft/PowerBI-visuals/wiki/Displaying-visuals-in-a-single-html-page)
