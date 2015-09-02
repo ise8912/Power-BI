@@ -1,4 +1,4 @@
-###Capabilities
+###Overview
 
 Looking thru [plugins.ts](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Visuals/plugins.ts) you will notice all the visuals in Power BI declare capabilities. Capabilities is the way for visuals to inform the host what it can do & show. 
 
