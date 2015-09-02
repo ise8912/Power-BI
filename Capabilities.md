@@ -18,3 +18,34 @@ Here is where you would also specify a data reduction algorithm. Power BI has a 
 
 ####Objects (Formatting Objects)
 
+In Power BI, the visuals are not responsible for creating any UI for formatting. Instead, they declare what formatting options they support, and the system creates the UI for them. This allows for visual builders to focus on the visual itself.
+
+There are four kinds of objects
+*Statically bound
+*Data bound
+*Metadata bound
+*User-defined
+
+#####Statically bound
+These are formatting options that are for a fixed number of that object type. They are not driven by any data, but rather artifacts that exist in all visuals of the same time. For example, Chart area, or axis lines. 
+
+#####Data bound
+These objects are bound to the number of data-points. A good example are the color of the bubbles in a bubble chart.
+
+#####Metadata bound
+These objects are bound to the number of fields. An example would be if you wanted to color all the bars in a series a particular color. 
+
+#####User-defined
+We **do not** yet support this, but this will be used to control user defined objects like trend line, which isn't necessarily fixed for all visuals like static properties, but don't exactly vary with data either. They are controlled by the user explicitly. An example are trend lines of a chart.  
+
+Lets take a look at the ones on a Funnel Chart.
+
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_objects.PNG)
+
+**labels** is an example of static object. Even though the number of labels vary by the number of datapoints, they are static in nature since the properties apply to all the labels, . After you declare an object like label, you then declare properties that users can control. For example, if it can be shown or not, what their colors are like. 
+
+**datapoint** is a special object name. If you want to support formatting individual datapoints, you **must** call the object datapoint, you can pick whatever display name you like for it. Due to UI limitations, we currently only allow for color properties to be declared.
+
+Here is what the generated UI looks like for these two objects.
+
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_objects_ui.PNG)
