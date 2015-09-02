@@ -1,9 +1,9 @@
 Here are a few links to get you started. If you are new to Powerbi-visuals, we recommend that you read these in order.
 
 ### Getting Started
-1. [IVisual Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/IVisual-Introduction)
-2. [DataView Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
-3. [Capabilities & Formatting Introduction](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities-&-Formatting-Introduction)
+1. [IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/IVisual-Introduction)
+2. [DataView - Lifebood of Power BI visuals](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
+3. [Capabilities & Formatting](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities-&-Formatting-Introduction)
 4. [Creating an IVisual : Cheer Meter](https://github.com/Microsoft/PowerBI-visuals/wiki/Creating-an-IVisual-:-Cheer-Meter)
 
 ### Running Visuals in a single page html
