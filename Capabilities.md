@@ -49,3 +49,16 @@ Lets take a look at the ones on a Funnel Chart.
 Here is what the generated UI looks like for these two objects.
 
 ![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_objects_ui.PNG)
+
+####Partial highlights, sort & drill
+
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_objects_rest.PNG)
+
+#####Partial Highlights
+Enabling this will tell the system you are capable of showing partial data segments in a cross filter, like the bar chart when you filter a part of a category it dims part of the bars. The system in this case will populate the dataview with partial values as well.
+
+#####Sort
+As advertised, allows you to specify sort order for your data
+
+#####Drill
+Allows for drilling to be enabled, so you can drill into categories. Enabling this will add UI to your visuals chrome, that will allow users to enter this mode.
