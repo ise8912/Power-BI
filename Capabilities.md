@@ -52,7 +52,7 @@ Here is what the generated UI looks like for these two objects.
 
 ####Partial highlights, sort & drill
 
-![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_objects_rest.PNG)
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_rest.PNG)
 
 #####Partial Highlights
 Enabling this will tell the system you are capable of showing partial data segments in a cross filter, like the bar chart when you filter a part of a category it dims part of the bars. The system in this case will populate the dataview with partial values as well.
