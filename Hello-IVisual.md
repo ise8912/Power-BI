@@ -20,6 +20,8 @@ public init(options: VisualInitOptions): void {
 		.append('text')
 		.style('cursor', 'pointer')
 		.attr('text-anchor', 'middle');
+
+        this.selectiionManager = new SelectionManager({ hostServices: options.host });
 }
 ```
 
@@ -70,6 +72,7 @@ export interface HelloViewModel {
 	text: string;
 	color: string;
 	size: number;
+        selector: data.Selector;
 	toolTipInfo: TooltipDataItem[];
 }
 
@@ -81,12 +84,18 @@ public static converter(dataView: DataView): HelloViewModel {
 		toolTipInfo: [{
 			displayName: 'Test',
 			value: '1...2....3... can you see me? I am sending random strings to the tooltip',
-		}]
+		}],
+		selector: SelectionId.createNull().getSelector()
 	};
 	var table = dataView.table;
 	if (!table) return viewModel;
 
 	viewModel.text = table.rows[0][0];
+	if (dataView.categorical) {
+		viewModel.selector = dataView.categorical.categories[0].identity
+			? SelectionId.createWithId(dataView.categorical.categories[0].identity[0]).getSelector()
+			: SelectionId.createNull().getSelector();
+	}
 
 	return viewModel;
 }
@@ -160,7 +169,19 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 
 In this case, it is simply passing values through, and providing defaults whenever undefined (first time load).
 
-####Step Six : Destroy
+####Step Six : Selection
+
+```typescript
+this.svgText.on('click', function () {
+	selectionManager
+		.select(viewModel.selector)
+		.then(ids => d3.select(this).style('stroke-width', ids.length > 0 ? '2px' : '0px'));
+})
+```
+
+Simple selection is pretty easy to add. There isn't much work required other than to call select on the selection manager with the selector for a datapoint. The host will take care of performing cross filtering, etc and send updates to the other visuals. You will only need to take care of the UI updates that go along with your selection. The selection manager will give you back a list of selectors to aid you in your UI updates.
+
+####Step Seven : Destroy
 
 Here just free up any javascript objects & other resources
 
