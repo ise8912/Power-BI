@@ -4,6 +4,8 @@ Hello IVisual aims to kick start your journey to creating exciting new visualiza
 
 The visual will display a text field in the center of it, and it will be driven of the first category or row values in the dataview.
 
+[Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html?visual=helloIVisual) of this visual
+
 ####Step One : Init
 
 First thing you will need is to implement the `init(options)' function. As you will recall, this is where we get the element to draw into, and a place to do one time setup.
@@ -179,3 +181,5 @@ export var helloIVisual: IVisualPlugin = {
 	create: () => new samples.HelloIVisual()
 };
 ```
+
+We can't wait to see what you will create. For a more complete sample, please refer to code for the [Aster Plot](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Visuals/visuals/samples/asterPlot.ts), and its [Live Preview](http://microsoft.github.io/PowerBI-visuals/playground/index.html?visual=asterPlot).
