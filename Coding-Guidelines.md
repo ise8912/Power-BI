@@ -4,14 +4,14 @@ All changes should follow our adopted coding guidelines. A detailed description 
 In TypeScript, class members are public by default. However, to improve readability (at the cost of conciseness) we will put accessibility modifiers on all members regardless of whether it’s strictly required. 
  
 **Example**
-```  
+```typescript  
 class Example { 
-  private a: string; 
-  public b: number; 
+    private a: string; 
+    public b: number; 
    
-  public doSomething(a: number): bool {  
-    return a === 5; 
-  } 
+    public doSomething(a: number): bool {  
+        return a === 5; 
+    } 
 }
 ```
 
@@ -19,10 +19,10 @@ class Example {
 Field names should be simple camel-cased names, and should not be prefixed with "_" or any other prefix. 
  
 **Example** 
-``` 
+```typescript  
 class Example { 
-  private foo: string; 
-  private myVariable: string; 
+    private foo: string; 
+    private myVariable: string; 
 } 
 ```  
 ##### DO: Use the correct case for classes, modules, functions, variables, statics, etc.  
@@ -33,34 +33,34 @@ Follow these rules when specifying the case of the names of classes, modules, fu
 3. Use PascalCase for constants 
  
 **Example**
-```  
+```typescript   
 module SomeModule { 
-class SomeClass { 
-private someVariable: string; 
-static someStaticVariable: string; 
-static SomeConstant = "SomeConstant"; 
-  } 
+    class SomeClass { 
+        private someVariable: string; 
+        static someStaticVariable: string; 
+        static SomeConstant = "SomeConstant"; 
+    } 
     export someFunction() { 
-  } 
+    } 
 } 
 ``` 
 ##### DO: Use type-safe variables 
 One of the major benefits of TypeScript over plain JavaScript is its type system. You should take advantage of this by always specifying variable types. The only exceptions are if you're initializing to a literal value or a new instance of a type (in which case TypeScript automatically infers the type). Variables should be explicitly typed as any if not possible to be more specific. 
   
 **Good**
-```  
+```typescript   
 var area: number = circle.area(); 
 public bar(arg0: string): number { 
 } 
-```  
+```   
 **Bad** 
-```  
+```typescript  
 var area = circle.area(); 
 public bar(arg0 :string):  number { 
 } 
 ```  
 **Allowable Exceptions** 
-```  
+```typescript   
 var document = new Document(); 
 var name = "since this is a literal assignment, we don't require name to be explicitly typed"; 
 Var aNumber = 10; 
@@ -69,9 +69,9 @@ Var aNumber = 10;
 NOTE: The easiest way to ensure your code meets the code formatting guidelines is to choose "Format Document" from Edit -> Advanced in Visual Studio. 
   
 **Example** 
-``` 
+```typescript  
 module Foo { 
-  export var version = 10; 
+    export var version = 10; 
 } 
 ``` 
 ##### DO NOT: Use array.forEach() 
@@ -81,34 +81,34 @@ For performance, always use a **for** loop.
 ##### DO NOT: Wrap single-line statements in {} 
  
 **Good**
-``` 
+```typescript  
 if (condition)  
-doAction(); 
+    doAction(); 
 ```  
 **Bad** 
-```
+```typescript 
 if (condition) { 
-doAction(); 
+    doAction(); 
 } 
 ``` 
 ##### DO NOT: Use the "this" keyword in static functions 
 This applies to both static functions on a class, or function on a module (which are also effectively static). 
   
 **Good** 
-```
+```typescript 
 module Foo { 
-  export function parse(): object { } 
-  export function callParse(): object { 
-    return parse(); 
+    export function parse(): object { } 
+    export function callParse(): object { 
+        return parse(); 
   } 
 } 
 ```  
 **Bad** 
-```
+```typescript 
 module Foo { 
-  export function parse(): object { } 
-  export function callParse(): object { 
-    return this.parse(); 
+    export function parse(): object { } 
+    export function callParse(): object { 
+        return this.parse(); 
   } 
 } 
 ```  
@@ -118,31 +118,31 @@ Even though this might seem obvious, TypeScript actually allows the “this” k
 ##### DO: When using modules as namespaces, write multiple hierarchy modules using the dotted syntax 
  
 **Good** 
-``` 
+```typescript  
 module Foo.Bar.Zeta { 
-export var version = 10; 
+    export var version = 10; 
 } 
 ``` 
 **Bad** 
-```
+```typescript 
 module { 
-module Bar { 
-    module Zeta { 
-     export var version = 10; 
-     } 
-  } 
+    module Bar { 
+        module Zeta { 
+            export var version = 10; 
+        } 
+    } 
 } 
 ``` 
 ##### DO: Always specify a return type for functions 
 If a function doesn't return anything, explicitly specify that it returns **void**. 
  
 **Good** 
-``` 
+```typescript  
 public foo(): void { 
 } 
 ``` 
 **Bad** 
-``` 
+```typescript  
 public foo() { 
 } 
 ``` 
@@ -150,40 +150,40 @@ public foo() {
 If you are creating a type that contains only static methods, define it in terms of a module and not a class. 
  
 **Good** 
-``` 
+```typescript  
 module Math { 
-export function round(x: number): number { // Effectively static, since it's accessible without an object instance 
+    export function round(x: number): number { // Effectively static, since it's accessible without an object instance 
 } 
 ``` 
 **Bad** 
-``` 
+```typescript  
 class Math { 
-static round(x: number): number { 
+    static round(x: number): number { 
 } 
 ``` 
 ##### DO: Use interfaces for types with only data 
 If you have a type that has only data and no methods, use an interface instead of a class. This helps avoid the overhead of TypeScript classes, while still ensuring type-safety. 
  
 **Good** 
-``` 
+```typescript  
 interface RGB { 
-r: number; 
-g: number; 
-b: number; 
+    r: number; 
+    g: number; 
+    b: number; 
 }; 
  
 public setRGB(rgb: RGB): void { 
-... 
+    ... 
 } 
  
 setRGB({r: 255, g: 255, b: 255}); 
 ``` 
 **Bad** 
-``` 
+```typescript  
 class rgb { 
-public r: number; 
-public g: number; 
-public b: number; 
+    public r: number; 
+    public g: number; 
+    public b: number; 
 } 
  
 var color = new rgb(255, 255, 255); 
@@ -193,7 +193,7 @@ var color = new rgb(255, 255, 255);
 Scope resolution in JavaScript is slow, especially for highly-populated namespaces. Therefore, you should always alias a namespace if you repeatedly reference its members. 
   
 **Good** 
-```  
+```typescript   
 import algorithms = BI.Common.Algorithms; 
 var find_if = algorithms.find_if; 
   
@@ -203,7 +203,7 @@ export function foo() {
 } 
 ```  
 **Bad** 
-```  
+```typescript   
 export function foo() { 
     var scopeValues1 = BI.Common.Algorithms.find_if(values, filter, i, n); 
     var scopeValues2 = BI.Common.Algorithms.find_if(values, filter, i, m);   
@@ -215,7 +215,7 @@ export function foo() {
 The Copyright declaration in code is a Microsoft requirement. 
  
 **[Example](https://github.com/Microsoft/PowerBI-visuals/blob/master/LICENSE)** 
-``` 
+```typescript  
  /*
  *  Power BI Visualizations
  *
@@ -246,25 +246,25 @@ The Copyright declaration in code is a Microsoft requirement.
 Using \ in reference declarations makes it easier to determine relative paths to files in the file system. 
  
 **Good** 
-``` 
+```typescript  
 /// <reference path="..\..\Common\Contracts.str" /> 
 ```  
 **Bad** 
-``` 
+```typescript 
 /// <reference path="../../Common/Contracts.str" /> 
 ``` 
 ##### DO: Use import for aliasing a module. 
 If you want to use a shorter alias for a module, use the import TypeScript keyword. 
  
 **Bad** 
-```
+```typescript
 module BI.PV.DP.Edm { 
 var Xml = BI.Common.Xml; 
 export function Test(document: Xml.IXMLDOMNode) {} // This will fail to compile since TypeScript doesn't recognize Xml as an alias. 
 } 
 ``` 
 **Good** 
-```
+```typescript
 module BI.PV.DP.Edm { 
 import Xml = BI.Common.Xml; 
 export function Test(document: Xml.IXMLDOMNode) {} // This works just fine. 
@@ -276,40 +276,42 @@ export function Test(document: Xml.IXMLDOMNode) {} // This works just fine.
 2. With TypeScript, you can provide an interface for a function.  
   
 **Good** 
-``` 
+```typescript 
 interface IStringComparer { 
 (a: string, b: string): number; 
 } 
  
 function Comparer(a : string, b:string) : number {  
-return 1; 
+    return 1; 
 }  
  
 function foo(comparer: IStringComparer) { 
-comparer("a", "b"); 
+    comparer("a", "b"); 
 } 
 ``` 
 or 
-``` 
+```typescript 
 function foo(comparer: (a: string, b: string) => number) { 
-comparer("a", "b"); 
+    comparer("a", "b"); 
 } 
  
 foo(Comparer); 
-``` 
+```
 **Bad** 
-``` 
+```typescript  
 function foo(comparer: Function) { 
-comparer("a", "b"); 
+    comparer("a", "b"); 
 } 
-``` 
+```
 ##### Consider: Using type-safe dictionary definitions  
 With TypeScript, you can provide an interface for the dictionary. Here's the syntax: 
 
-`dictionaryName: { [index: keyType]: valueType; }`
+```typescript
+dictionaryName: { [index: keyType]: valueType; }
+```
   
 **Good** 
-``` 
+```typescript 
 var someDict: { [index: string]: SomeObject; }; 
 someDict["key1"] = new SomeObject("firstOb"); 
 someDict["key2"] = new SomeObject("secondOb"); 
@@ -318,7 +320,7 @@ someDict["key3"] = 4; //will throw a compiler error for the value
 ``` 
  
 **Bad** 
-``` 
+```typescript 
 var someDict: any; 
 someDict["key1"] = new SomeObject("firstOb"); 
 someDict["key2"] = new SomeObject("secondOb"); 
@@ -333,7 +335,7 @@ This is important when defining something that will be used by others.
  
 **Example** 
 (Router) 
-``` 
+```typescript 
 // - Why do we need it 
 // 
 // Single page Web App runs in browser, so users expect common user experience  
@@ -373,18 +375,20 @@ This is important when defining something that will be used by others.
 When the logic is not obvious, add comments to help explain its purpose. 
  
 **Example**  
-``` 
+```typescript 
 // If the focus does not match the native focus, blur the native focus. 
 // NOTE: 
 // When focus blur away from body element, the IE browser lost the  
 // focus if there is only one tab in the browser window. 
 if (activeElement !== document.activeElement && 
-document.activeElement !== document.body) { 
-$(document.activeElement).blur(); 
+    document.activeElement !== document.body) { 
+        $(document.activeElement).blur(); 
 } 
 ``` 
 ##### Consider: Specifying TODO comments when needed 
  
 Consider adding TODO comments on top of the blocks you want to refactor later or in areas that are not complete. In most cases, it will probably not be obvious what needs to be done. In those cases, add additional information about what needs to be done. 
  
-`// TODO: This code needs to be refactored`
+```typescript
+// TODO: This code needs to be refactored
+```
