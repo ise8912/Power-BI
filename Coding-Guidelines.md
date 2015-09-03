@@ -16,7 +16,7 @@ class Example {
 ```
 
 ##### DO NOT: Prefix private field names with "_" or other decorations 
-Field names should be simple camel-cased names, and should not be prefixed with "_" or any other prefix. 
+Field names should be simple camelCase names, and should not be prefixed with "_" or any other prefix. 
  
 **Example** 
 ```typescript  
@@ -24,7 +24,16 @@ class Example {
     private foo: string; 
     private myVariable: string; 
 } 
-```  
+```
+##### DO: Use camelCase names for the newly created files
+
+
+Same rule as for field names - do not use prefixes and use camelCase style of naming.
+
+**Example** 
+```
+animatedNumber.ts
+```
 ##### DO: Use the correct case for classes, modules, functions, variables, statics, etc.  
 Follow these rules when specifying the case of the names of classes, modules, functions, and variables: 
  
