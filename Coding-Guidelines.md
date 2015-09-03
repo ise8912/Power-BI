@@ -345,39 +345,40 @@ This is important when defining something that will be used by others.
 **Example** 
 (Router) 
 ```typescript 
-// - Why do we need it 
-// 
-// Single page Web App runs in browser, so users expect common user experience  
-// in Web browsers, that means the app should enable the user to: 
-// 1) see address information from browser's URL input bar. 
-// 2) see history of navigation from the browser's history dropdown list and 
-// jump to anywhere. 
-// 3) use browser back, forward button to travel navigation history. 
-// 4) use browser’s native keyboard accessibility to travel in the history. 
-// 5) bookmark a certain view with browser. 
-// 6) share a certain view by send a URL with hash. 
-// 7) fresh page (for any reasons, speeding up browser for instance) without  
-// having to leave the view. 
-//  
-// Hash-based routing can also simplify UI navigation architecture and provide 
-// a loose-coupled way of hook component together for navigation handling. 
-// 
-// - How it works 
-// 
-// When hash got changed in browser's URL input bar, a `hashchange` event be 
-// fired by the browser on global object. Router will capture the event and 
-// compare it with registered routes to find the match handler and invoke it 
-// by passing the params (hashtable), query (hashtable) and the URL string. 
-// 
-// - How do you use it 
-// 
-// Example: 
-// 
-// BI.PV.Services.addRoutes([ 
-// ['/document/{docId}/page/{pageNamber}', function (params, query, url) { 
-// ... 
-// }] 
-// ]); 
+/** - Why do we need it 
+* 
+* Single page Web App runs in browser, so users expect common user experience  
+* in Web browsers, that means the app should enable the user to: 
+* 1) see address information from browser's URL input bar. 
+* 2) see history of navigation from the browser's history dropdown list and 
+* jump to anywhere. 
+* 3) use browser back, forward button to travel navigation history. 
+* 4) use browser’s native keyboard accessibility to travel in the history. 
+* 5) bookmark a certain view with browser. 
+* 6) share a certain view by send a URL with hash. 
+* 7) fresh page (for any reasons, speeding up browser for instance) without  
+* having to leave the view. 
+*  
+* Hash-based routing can also simplify UI navigation architecture and provide 
+* a loose-coupled way of hook component together for navigation handling. 
+*
+* - How it works 
+* 
+* When hash got changed in browser's URL input bar, a `hashchange` event be 
+* fired by the browser on global object. Router will capture the event and 
+* compare it with registered routes to find the match handler and invoke it 
+* by passing the params (hashtable), query (hashtable) and the URL string. 
+* 
+* - How do you use it 
+* 
+* Example: 
+* 
+* BI.PV.Services.addRoutes([ 
+* ['/document/{docId}/page/{pageNamber}', function (params, query, url) { 
+* ... 
+* }] 
+* ]); 
+*/
 ``` 
 ##### Consider: Inline comments 
  
@@ -385,10 +386,11 @@ When the logic is not obvious, add comments to help explain its purpose.
  
 **Example**  
 ```typescript 
-// If the focus does not match the native focus, blur the native focus. 
-// NOTE: 
-// When focus blur away from body element, the IE browser lost the  
-// focus if there is only one tab in the browser window. 
+/** If the focus does not match the native focus, blur the native focus. 
+* NOTE: 
+* When focus blur away from body element, the IE browser lost the  
+* focus if there is only one tab in the browser window. 
+*/
 if (activeElement !== document.activeElement && 
     document.activeElement !== document.body) { 
         $(document.activeElement).blur(); 
@@ -399,5 +401,5 @@ if (activeElement !== document.activeElement &&
 Consider adding TODO comments on top of the blocks you want to refactor later or in areas that are not complete. In most cases, it will probably not be obvious what needs to be done. In those cases, add additional information about what needs to be done. 
  
 ```typescript
-// TODO: This code needs to be refactored
+/** TODO: This code needs to be refactored */
 ```
