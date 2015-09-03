@@ -6,6 +6,7 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 3. [Capabilities](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities)
 4. [Creating an IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/Hello-IVisual)
 5. [Debugging](https://github.com/Microsoft/PowerBI-visuals/wiki/Debugging)
+6. [FAQs](https://github.com/Microsoft/PowerBI-visuals/wiki/FAQs)
 
 ### Running Visuals in a single page html
 1. [Basics] (https://github.com/Microsoft/PowerBI-visuals/wiki/Displaying-visuals-in-a-single-html-page)
