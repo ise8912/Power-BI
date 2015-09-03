@@ -1,8 +1,8 @@
 ###Include the JS & CSS into your page.
 
 ```html
-<link href="visuals.min.css" rel="stylesheet">
-<script type="text/javascript" src="powerbi-visuals.all.min.js"></script>
+<link href="visuals.css" rel="stylesheet">
+<script type="text/javascript" src="powerbi-visuals.all.js"></script>
 ```
 
 ### Create a DataView
@@ -166,8 +166,8 @@ This is the complete example created from the steps above
     <meta charset="UTF-8">
     <title></title>
 
-    <link href="visuals.min.css" rel="stylesheet">
-    <script type="text/javascript" src="powerbi-visuals.all.min.js"></script>
+    <link href="visuals.css" rel="stylesheet">
+    <script type="text/javascript" src="powerbi-visuals.all.js"></script>
     <style>
         .visual {
             'background-color' : 'white',
