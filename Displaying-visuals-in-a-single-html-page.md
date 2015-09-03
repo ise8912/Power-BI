@@ -2,7 +2,8 @@
 
 ```html
 <link href="visuals.css" rel="stylesheet">
-<script type="text/javascript" src="powerbi-visuals.all.js"></script>
+<script type="text/javascript" src="externals.min.js"></script>  
+<script type="text/javascript" src="powerbi-visuals.js"></script>   
 ```
 
 ### Create a DataView
