@@ -341,7 +341,8 @@ Dictionaries can be used only when the keys are strings or numbers. For any othe
  
 ##### Consider: In-place documentation explaining purpose, usage and examples 
 This is important when defining something that will be used by others. 
- 
+All comments should be done in 'Markdown' format:
+
 **Example** 
 (Router) 
 ```typescript 
