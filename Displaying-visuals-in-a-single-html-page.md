@@ -134,7 +134,7 @@ visual.init({
     // empty DOM element the visual should attach to.
     element: element,
     // host services
-    host: singleVisualHostServices,
+    host: defaultVisualHostServices,
     style: createDefaultStyles(),
     viewport: {
         height:height,
@@ -168,7 +168,8 @@ This is the complete example created from the steps above
     <title></title>
 
     <link href="visuals.css" rel="stylesheet">
-    <script type="text/javascript" src="powerbi-visuals.all.js"></script>
+    <script type="text/javascript" src="externals.min.js"></script>  
+    <script type="text/javascript" src="powerbi-visuals.js"></script>  
     <style>
         .visual {
             'background-color' : 'white',
@@ -272,7 +273,7 @@ This is the complete example created from the steps above
 
     function createVisual() {
         var pluginService = powerbi.visuals.visualPluginFactory.create();
-        var singleVisualHostServices = powerbi.visuals.singleVisualHostServices;
+        var defaultVisualHostServices = powerbi.visuals.defaultVisualHostServices;
         var width = 600;
         var height = 400;
 
@@ -283,11 +284,13 @@ This is the complete example created from the steps above
         // Get a plugin
         var visual = pluginService.getPlugin('columnChart').create();
 
+        powerbi.visuals.DefaultVisualHostServices.initialize(); 
+
         visual.init({
             // empty DOM element the visual should attach to.
             element: element,
             // host services
-            host: singleVisualHostServices,
+            host: defaultVisualHostServices,
             style: createDefaultStyles(),
             viewport: {
                 height:height,
