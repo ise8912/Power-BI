@@ -87,18 +87,18 @@ module Foo {
 For performance, always use a **for** loop. 
  
  
-##### DO NOT: Wrap single-line statements in {} 
+##### DO: Surround loop and conditional bodies with {} 
  
 **Good**
 ```typescript  
-if (condition)  
-    doAction(); 
-```  
-**Bad** 
-```typescript 
 if (condition) { 
     doAction(); 
 } 
+```  
+**Bad** 
+```typescript 
+if (condition)  
+    doAction(); 
 ``` 
 ##### DO NOT: Use the "this" keyword in static functions 
 This applies to both static functions on a class, or function on a module (which are also effectively static). 
