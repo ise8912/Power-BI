@@ -63,7 +63,7 @@ public static capabilities: VisualCapabilities = {
 };
 ```
 
-To learn more about capabilities refer here. To translate this in words we are saying that this visual will display a table of data, it prefers that there be one row. It also allows for the user to change the color & size of its text. 
+To learn more about capabilities refer [here](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities). To translate this in words we are saying that this visual will display a table of data, it prefers that there be one row. It also allows for the user to change the color & size of its text. 
 
 ####Step Three : Converter
 
