@@ -1,6 +1,6 @@
 ###Overview
 
-Looking thru [plugins.ts](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Visuals/plugins.ts) you will notice all the visuals in Power BI declare capabilities. Capabilities is the way for visuals to inform the host what it can do & show. 
+Looking through [plugins.ts](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Visuals/plugins.ts) you will notice all the visuals in Power BI declare capabilities. Capabilities is the way for visuals to inform the host what it can do & show. 
 
 In Power BI, we have a few kinds of hosting environments for our visuals like the Dashboard, Q'n'A, Reporting Canvas, Mobile etc. Each hosts uses the visual's capabilities to provide various extensions. The Reporting canvas for example uses this information to populate the field well & formatting pane.
 
