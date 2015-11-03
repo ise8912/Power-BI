@@ -1,6 +1,6 @@
 Tooltip Services allows user to see chart values for any selected point.
 See example on the screenshot below:
-
+![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/tooltip/tooltip_sample.PNG)
 For this purpose interface with coordinates of selected points must be expanded by another TooltipEnabledDataPoint interface and add tooltipInfo?: TooltipDataItem[] attribute to dataPoints array. 
 ```
 dataPoints.push({
