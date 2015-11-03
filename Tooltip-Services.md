@@ -18,9 +18,8 @@ dataPoints.push({
                 }
         ],
         identity: identityData,
-        selected: false,
-        });
-}
+        selected: false
+});
 ```
 tooltipInfo is an array of lines, where all data for rendering in tooltip will be listed.
 
