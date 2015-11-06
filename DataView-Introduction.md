@@ -23,7 +23,7 @@ Data here is organized into columns, with arrays of data.
 
 ![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/categorical_column_chart.PNG)
 
-For example, this column chart's data would like this in the dataview. 
+For example, this column chart's data would look like this in the dataview. 
 
 ![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/dataview/categorical_diagram.PNG)
 
