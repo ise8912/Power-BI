@@ -10,7 +10,7 @@ For a deeper understanding lets take a look at the [Funnel chart's capabilities]
 
 ####Data Roles & Dataview mappings
 
-Data roles tell the host about what kind of field buckets is the visual expecting. In this case the funnel chart wants to show categories that have discrete values & two measure type fields. The dataview mapping describes how these fields relate to one another, and informs the system how it should construct its dataview. In addition it also informs about some conditions about the number of fields in each bucket.
+Data roles tell the host about what kind of field buckets the visual is expecting. In this case the funnel chart wants to show categories that have discrete values & two measure type fields. The dataview mapping describes how these fields relate to one another, and informs the system how it should construct its dataview. In addition it also informs about some conditions about the number of fields in each bucket.
 
 ![](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/capabilities/funnel_caps_dataroles.PNG)
 
