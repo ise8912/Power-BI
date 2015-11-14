@@ -175,16 +175,16 @@ result will be equals to "-2.4M"
 
 **Example of tooltip info creation:**
 
- var formatter = valueFormatter.create({ format: "0", value: 0 });
+ `var formatter = valueFormatter.create({ format: "0", value: 0 });`
 
-  tooltipInfo: [
-                {
-                    displayName: categoryColumn.source.displayName,
-                    value: categoryColumn.values[categoryIndex],
-                }, {
-                    displayName: y.source.displayName,
-                    value: formatter.format(y.values[categoryIndex])
-                }
-        ],
+  `tooltipInfo: [`
+                `{`
+                    `displayName: categoryColumn.source.displayName,`
+                    `value: categoryColumn.values[categoryIndex],`
+                `}, {`
+                    `displayName: y.source.displayName,`
+                    `value: formatter.format(y.values[categoryIndex])`
+                `}`
+        `],`
 
 in this example all values of y category will be formatted as numbers
