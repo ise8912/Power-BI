@@ -1,9 +1,11 @@
  
-The main purpose of ValueFormatter is to give the users some mechanism to format axis labels, tooltip data and some other data which appears on the screen. For example the number 1000000 will be looking like 1M.
+The main purpose of ValueFormatter is to give the users some mechanism to format axis labels, tooltip data and some other data which appears on the screen. 
+
+For example the number 1000000 will be formatted to "1M".
 
 To create valueFormatter use create method:
 
- valueFormatter = ValueFormatter.create(options: ValueFormatterOptions);
+` valueFormatter = ValueFormatter.create(options: ValueFormatterOptions);`
 
  where ValueFormatterOptions is:
 
