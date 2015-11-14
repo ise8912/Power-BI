@@ -38,7 +38,7 @@ To create valueFormatter use create method:
         columnType?: ValueType;
     }
 
-Example of formatter creation:
+# Example of formatter creation:
 
 var formater = valueFormatter.create({ format: "0", value: 1e6, value2: null });
 
