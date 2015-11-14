@@ -165,11 +165,11 @@ result will be equals to "-2.4M"
 
 **NaNs/nulls:**
 
- var formatter = valueFormatter.create({ format: "0", value: 0 });
-                formatter.format(Number.NaN) == "NaN"
-                formatter.format(Number.NEGATIVE_INFINITY) == "-Infinity";
-                formatter.format(Number.POSITIVE_INFINITY) == "+Infinity";
-                formatter.format(null) == "(Blank)";
+` var formatter = valueFormatter.create({ format: "0", value: 0 });`
+                `formatter.format(Number.NaN) == "NaN"`
+                `formatter.format(Number.NEGATIVE_INFINITY) == "-Infinity";`
+                `formatter.format(Number.POSITIVE_INFINITY) == "+Infinity";`
+                `formatter.format(null) == "(Blank)";`
 
 
 
