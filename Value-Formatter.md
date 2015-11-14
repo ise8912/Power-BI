@@ -156,6 +156,12 @@ result will be equals to "-2.4M"
 
 **Boolean**
 
+				 var format: string;
+                var formatter = valueFormatter.create({ format: format, value: false, value2: true, tickCount: 6 });
+
+                formatter.format(true) == "True"
+                formatter.format(false) == "False"
+                formatter.format(null) == "(Blank)"
 
 **NaNs/nulls:**
 
