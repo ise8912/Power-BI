@@ -38,7 +38,7 @@ To create valueFormatter use create method:
         columnType?: ValueType;
     }
 
-# Example of formatter creation:
+**Example of formatter creation:**
 
 var formater = valueFormatter.create({ format: "0", value: 1e6, value2: null });
 
@@ -48,9 +48,9 @@ var result = formater.format(-2.4e6); // == "-2.4M"
 
 result will be equals to "-2.4M"
 
-Examples of formatter usage:
+**Examples of formatter usage:**
 
-Numbers:
+**Numbers:**
 
  		var formatter = valueFormatter.create({ value: 0 });
 
@@ -60,7 +60,7 @@ Numbers:
                 formatter.format(1.234e7) == "12340000"
                 formatter.format(1.12000000000007) == "1.12"
 
-Million:
+**Million:**
                
                 var formatter = valueFormatter.create({ value: 1e6 });
 
@@ -84,7 +84,7 @@ Million:
 
                 formatter.format(900000000) == "900M"
 
-Billion:
+**Billion:**
 
                 var formatter = valueFormatter.create({ value: 1e9 });
 
@@ -110,13 +110,13 @@ Billion:
                 formatter.format(900000000000) == "900bn"
 
 
-Exponent format:
+**Exponent format:**
 
  				var formatter = valueFormatter.create({ format: "E", value: 1e15 });
 
                 formatter.format(719200000000001920000000000) == "7.192000E+026"
 
-Percentage format:
+**Percentage format:**
 
 				var formatter = valueFormatter.create({ format: "0.00 %;-0.00 %;0.00 %", value: 1, allowFormatBeautification: true });
 
@@ -130,25 +130,20 @@ Percentage format:
                 formatter.format(6.54321) == "654.32%"
                 formatter.format(76.54321) == "7,654.32%"
 
-Escaped Character format:
+**Escaped Character format:**
 
 				var formatter = valueFormatter.create({ format: "\\$#,0.00;(\\$#,0.00);\\$#,0.00", value: 1e6 });
 
                 formatter.format(107384391.61) == "$107.38M"
                 formatter.format(-107384391.61) == "($107.38M)"
 
-Format no custom negative:
+**Format no custom negative:**
 	
 				var formatter = valueFormatter.create({ format: "$#,0.00", value: 1e6 });
 
                 formatter.format(-107384391.61) == "-$107.38M"
 
-HundredThousand:
-
-				
-
-               
-Dates:
+**Dates:**
 
 				var format: string = "O";
                 var minDate = new Date(2014, 10, 4, 12, 34, 56, 789);
@@ -159,10 +154,10 @@ Dates:
                 formatter.format(maxDate) == "Nov 09"
                 formatter.format(null) == "(Blank)"
 
-Boolean
+**Boolean**
 
 
-NaNs/nulls:
+**NaNs/nulls:**
 
  var formatter = valueFormatter.create({ format: "0", value: 0 });
                 formatter.format(Number.NaN) == "NaN"
@@ -172,7 +167,7 @@ NaNs/nulls:
 
 
 
-Example of tooltip info creation:
+**Example of tooltip info creation:**
 
  var formatter = valueFormatter.create({ format: "0", value: 0 });
 
