@@ -2,195 +2,195 @@ The `TextMeasurementService` provides special capabilities to get properties of 
 
 The `powerbi.TextMeasurementService` module exposes the following methods:
 ```TypeScript
-    function measureSvgTextWidth(textProperties: powerbi.TextProperties): number;
-    function measureSvgTextHeight(textProperties: powerbi.TextProperties): number;
-    function estimateSvgTextHeight(textProperties: powerbi.TextProperties): number;
-    function measureSvgTextElementWidth(svgElement: SVGTextElement): number;
-    function getMeasurementProperties(element: JQuery): powerbi.TextProperties;   
-    function getSvgMeasurementProperties(svgElement: SVGTextElement): powerbi.TextProperties;   
-    function getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string;     
-    function svgEllipsis(textElement: SVGTextElement, maxWidth: number): void;      
-    function wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding?: number): void;
+function measureSvgTextWidth(textProperties: powerbi.TextProperties): number;
+function measureSvgTextHeight(textProperties: powerbi.TextProperties): number;
+function estimateSvgTextHeight(textProperties: powerbi.TextProperties): number;
+function measureSvgTextElementWidth(svgElement: SVGTextElement): number;
+function getMeasurementProperties(element: JQuery): powerbi.TextProperties;   
+function getSvgMeasurementProperties(svgElement: SVGTextElement): powerbi.TextProperties;   
+function getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string;     
+function svgEllipsis(textElement: SVGTextElement, maxWidth: number): void;      
+function wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding?: number): void;
 ```
 Where `powerbi.TextProperties` interface is defined as following:
 ```TypeScript
-    interface TextProperties {
-        text?: string;
-        fontFamily: string;
-        fontSize: string;
-        fontWeight?: string;
-        fontStyle?: string;
-        whiteSpace?: string;
-    }
+interface TextProperties {
+    text?: string;
+    fontFamily: string;
+    fontSize: string;
+    fontWeight?: string;
+    fontStyle?: string;
+    whiteSpace?: string;
+}
 ```
 ## measureSvgTextWidth
 This method measures the width of the text with the given SVG text properties.
 ```TypeScript
-    powerbi.TextMeasurementService.measureSvgTextWidth(textProperties: powerbi.TextProperties): number
+powerbi.TextMeasurementService.measureSvgTextWidth(textProperties: powerbi.TextProperties): number
 ```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
 ```TypeScript
-    let textProperties: powerbi.TextProperties = {
-        text: "Microsoft PowerBI",
-        fontFamily: "sans-serif",
-        fontSize: "24px"
-    };
-    
-    powerbi.TextMeasurementService.measureSvgTextWidth(textProperties);
+let textProperties: powerbi.TextProperties = {
+    text: "Microsoft PowerBI",
+    fontFamily: "sans-serif",
+    fontSize: "24px"
+};
 
-    // returns: 194.71875
+powerbi.TextMeasurementService.measureSvgTextWidth(textProperties);
+
+// returns: 194.71875
 ```
 ## measureSvgTextHeight
 This method measures the height of the text with the given SVG text properties.
 ```TypeScript
-    powerbi.TextMeasurementService.measureSvgTextHeight(textProperties: powerbi.TextProperties): number
+powerbi.TextMeasurementService.measureSvgTextHeight(textProperties: powerbi.TextProperties): number
 ```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
 ```TypeScript
-    let textProperties: powerbi.TextProperties = {
-        text: "Microsoft PowerBI",
-        fontFamily: "sans-serif",
-        fontSize: "24px"
-    };
+let textProperties: powerbi.TextProperties = {
+    text: "Microsoft PowerBI",
+    fontFamily: "sans-serif",
+    fontSize: "24px"
+};
 
-    powerbi.TextMeasurementService.measureSvgTextHeight(textProperties);
+powerbi.TextMeasurementService.measureSvgTextHeight(textProperties);
 
-    // returns: 27
+// returns: 27
 ```
 ## estimateSvgTextHeight
 This method estimates the height of the text with the given SVG text properties.
 ```TypeScript
-    powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties: powerbi.TextProperties): number
+powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties: powerbi.TextProperties): number
 ```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
 ```TypeScript
-    let textProperties: powerbi.TextProperties = {
-        text: "Microsoft PowerBI",
-        fontFamily: "sans-serif",
-        fontSize: "24px"
-    };
+let textProperties: powerbi.TextProperties = {
+    text: "Microsoft PowerBI",
+    fontFamily: "sans-serif",
+    fontSize: "24px"
+};
 
-    powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties);
+powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties);
 
-    // returns: 27
+// returns: 27
 ```
 ## measureSvgTextElementWidth
 This method measures the width of the svgElement.
 ```TypeScript
-    powerbi.TextMeasurementService.measureSvgTextElementWidth(svgElement: SVGTextElement): number
+powerbi.TextMeasurementService.measureSvgTextElementWidth(svgElement: SVGTextElement): number
 ```
 **Parameters:**
 * **measureSvgTextElementWidth:** The SVGTextElement to be measured (interface [lib.d.ts](https://github.com/clausreinke/typescript-tools/blob/master/bin/lib.d.ts#L13634)).
 
 **Example:**
 ```TypeScript
-    let svg: D3.Selection = d3.select("body").append("svg");
+let svg: D3.Selection = d3.select("body").append("svg");
 
-    svg.append("text")
-        .text("Microsoft PowerBI")
-        .attr({
-            "x": 25,
-            "y": 25
-        })
-        .style({
-            "font-family": "sans-serif",
-            "font-size": "24px"
-        });
+svg.append("text")
+    .text("Microsoft PowerBI")
+    .attr({
+        "x": 25,
+        "y": 25
+    })
+    .style({
+        "font-family": "sans-serif",
+        "font-size": "24px"
+    });
 
-    let textElement: D3.Selection = svg.select("text");
+let textElement: D3.Selection = svg.select("text");
 
-    powerbi.TextMeasurementService.measureSvgTextElementWidth(textElement[0][0]);
+powerbi.TextMeasurementService.measureSvgTextElementWidth(textElement[0][0]);
 
-    // returns: 194.71875
+// returns: 194.71875
 ```
 ## getMeasurementProperties
 This method fetches the text measurement properties of the given DOM element.
 ```TypeScript
-    powerbi.TextMeasurementService.getMeasurementProperties(element: JQuery): powerbi.TextProperties
+powerbi.TextMeasurementService.getMeasurementProperties(element: JQuery): powerbi.TextProperties
 ```
 **Parameters:**
 * **element:** The selector for the DOM Element (interface [jquery.d.ts](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Typedefs/jquery/jquery.d.ts#L1262)).
 
 **Example:**
 ```TypeScript
-    let element: JQuery = $(document.createElement("div"));
+let element: JQuery = $(document.createElement("div"));
 
-    element.text("Microsoft PowerBI");
+element.text("Microsoft PowerBI");
 
-    element.css({
-        "width": 500,
-        "height": 500,
-        "font-family": "sans-serif",
-        "font-size": "32em",
-        "font-weight": "bold",
-        "font-style": "italic",
-        "white-space": "nowrap"
-    });
+element.css({
+    "width": 500,
+    "height": 500,
+    "font-family": "sans-serif",
+    "font-size": "32em",
+    "font-weight": "bold",
+    "font-style": "italic",
+    "white-space": "nowrap"
+});
 
-    powerbi.TextMeasurementService.getMeasurementProperties(element);
+powerbi.TextMeasurementService.getMeasurementProperties(element);
 
-    /* returns: 
-        {
-            "text": "Microsoft PowerBI",
-            "fontFamily": "sans-serif",
-            "fontSize": "32em",
-            "fontWeight": "bold",
-            "fontStyle": "italic",
-            "whiteSpace": "nowrap"
-        }
-    */
+/* returns: 
+    {
+        "text": "Microsoft PowerBI",
+        "fontFamily": "sans-serif",
+        "fontSize": "32em",
+        "fontWeight": "bold",
+        "fontStyle": "italic",
+        "whiteSpace": "nowrap"
+    }
+*/
 ```
 ## getSvgMeasurementProperties
 This method fetches the text measurement properties of the given SVG text element.
 ```TypeScript
-    powerbi.TextMeasurementService.getSvgMeasurementProperties(svgElement: SVGTextElement): powerbi.TextProperties
+powerbi.TextMeasurementService.getSvgMeasurementProperties(svgElement: SVGTextElement): powerbi.TextProperties
 ```
 **Parameters:**
 * **svgElement:** The SVGTextElement to be measured (interface [lib.d.ts](https://github.com/clausreinke/typescript-tools/blob/master/bin/lib.d.ts#L13634)).
 
 **Example:**
 ```TypeScript
-    let svg: D3.Selection = d3.select("body").append("svg");
+let svg: D3.Selection = d3.select("body").append("svg");
 
-    svg.append("text")
-        .text("Microsoft PowerBI")
-        .attr({
-            "x": 25,
-            "y": 25
-        })
-        .style({
-            "font-family": "sans-serif",
-            "font-size": "24px"
-        });
-    
-    let textElement: D3.Selection = svg.select("text");
-    
-    powerbi.TextMeasurementService.getSvgMeasurementProperties(textElement[0][0]);
+svg.append("text")
+    .text("Microsoft PowerBI")
+    .attr({
+        "x": 25,
+        "y": 25
+    })
+    .style({
+        "font-family": "sans-serif",
+        "font-size": "24px"
+    });
 
-    /* returns: 
-        {
-            "text": "Microsoft PowerBI",
-            "fontFamily": "sans-serif",
-            "fontSize": "24px",
-            "fontWeight": "normal",
-            "fontStyle": "normal",
-            "whiteSpace": "nowrap"
-        }
-    */
+let textElement: D3.Selection = svg.select("text");
+
+powerbi.TextMeasurementService.getSvgMeasurementProperties(textElement[0][0]);
+
+/* returns: 
+    {
+        "text": "Microsoft PowerBI",
+        "fontFamily": "sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "whiteSpace": "nowrap"
+    }
+*/
 ```
 ## getTailoredTextOrDefault
 Compares labels text size to the available size and renders ellipses when the available size is smaller.
 ```TypeScript
-    powerbi.TextMeasurementService.getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string
+powerbi.TextMeasurementService.getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string
 ```
 **Parameters:**
 
@@ -199,20 +199,20 @@ Compares labels text size to the available size and renders ellipses when the av
 
 **Example:**
 ```TypeScript
-    let textProperties: powerbi.TextProperties = {
-        text: "Microsoft PowerBI!",
-        fontFamily: "sans-serif",
-        fontSize: "24px"
-    };
-    
-    powerbi.TextMeasurementService.getTailoredTextOrDefault(textProperties, 75);
+let textProperties: powerbi.TextProperties = {
+    text: "Microsoft PowerBI!",
+    fontFamily: "sans-serif",
+    fontSize: "24px"
+};
 
-    // returns: Micr…
+powerbi.TextMeasurementService.getTailoredTextOrDefault(textProperties, 75);
+
+// returns: Micr…
 ```
 ## svgEllipsis
 Compares labels text size to the available size and renders ellipses when the available size is smaller.
 ```TypeScript
-    powerbi.TextMeasurementService.svgEllipsis(textElement: SVGTextElement, maxWidth: number): void
+powerbi.TextMeasurementService.svgEllipsis(textElement: SVGTextElement, maxWidth: number): void
 ```
 **Parameters:**
 * **textElement:** The SVGTextElement containing the text to render.
@@ -220,42 +220,42 @@ Compares labels text size to the available size and renders ellipses when the av
 
 **Example:**
 ```TypeScript
-    let svg: D3.Selection = d3.select("body").append("svg");
-    
-    svg.append("text")
-        .text("Microsoft PowerBI")
-        .attr({
-            "x": 25,
-            "y": 25
-        })
-        .style({
-            "font-family": "sans-serif",
-            "font-size": "24px"
-        });
-    
-    let textElement: D3.Selection = svg.select("text");
-    
-    powerbi.TextMeasurementService.svgEllipsis(textElement[0][0], 75);
+let svg: D3.Selection = d3.select("body").append("svg");
 
-    /* result:
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="UTF-8"> 
-                <title>Microsoft PowerBI</title> 
-            </head>
-            <body> 
-                <svg>
-                    <text x="25" y="25" style="font-family: sans-serif; font-size: 24px;">Micr…</text>
-                </svg>
-            </body>
-        </html>
-    */
+svg.append("text")
+    .text("Microsoft PowerBI")
+    .attr({
+        "x": 25,
+        "y": 25
+    })
+    .style({
+        "font-family": "sans-serif",
+        "font-size": "24px"
+    });
+
+let textElement: D3.Selection = svg.select("text");
+
+powerbi.TextMeasurementService.svgEllipsis(textElement[0][0], 75);
+
+/* result:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8"> 
+            <title>Microsoft PowerBI</title> 
+        </head>
+        <body> 
+            <svg>
+                <text x="25" y="25" style="font-family: sans-serif; font-size: 24px;">Micr…</text>
+            </svg>
+        </body>
+    </html>
+*/
 ```
 ## wordBreak
 Word break textContent of `<text>` SVG element into `<tspan>s`. Each tspan will be the height of a single line of text.
 ```TypeScript
-    powerbi.TextMeasurementService.wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding: number = 0): void
+powerbi.TextMeasurementService.wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding: number = 0): void
 ```
 **Parameters:**
 
@@ -266,38 +266,38 @@ Word break textContent of `<text>` SVG element into `<tspan>s`. Each tspan will 
 
 **Example:**
 ```TypeScript
-    let svg: D3.Selection = d3.select("body").append("svg");
+let svg: D3.Selection = d3.select("body").append("svg");
 
-    svg.append("text")
-        .text("Hello World!")
-        .attr({
-            "x": 25,
-            "y": 25
-        })
-        .style({
-            "font-family": "sans-serif",
-            "font-size": "24px"
-        });
+svg.append("text")
+    .text("Hello World!")
+    .attr({
+        "x": 25,
+        "y": 25
+    })
+    .style({
+        "font-family": "sans-serif",
+        "font-size": "24px"
+    });
 
-    let textElement: D3.Selection = svg.select("text");
+let textElement: D3.Selection = svg.select("text");
 
-    powerbi.TextMeasurementService.wordBreak(textElement[0][0], 100, 200);
+powerbi.TextMeasurementService.wordBreak(textElement[0][0], 100, 200);
 
-    /* result:
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="UTF-8"> 
-                <title>Microsoft PowerBI</title> 
-            </head>
-            <body> 
-                <svg>
-                    <text x="25" y="25" style="font-family: sans-serif; font-size: 24px;">
-                        <tspan x="0" dy="25">Microsoft</tspan>
-                        <tspan x="0" dy="27">PowerBI</tspan>
-                    </text>
-                </svg>
-            </body>
-        </html>
-    */
+/* result:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8"> 
+            <title>Microsoft PowerBI</title> 
+        </head>
+        <body> 
+            <svg>
+                <text x="25" y="25" style="font-family: sans-serif; font-size: 24px;">
+                    <tspan x="0" dy="25">Microsoft</tspan>
+                    <tspan x="0" dy="27">PowerBI</tspan>
+                </text>
+            </svg>
+        </body>
+    </html>
+*/
 ```
