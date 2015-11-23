@@ -1,7 +1,7 @@
 The `TextMeasurementService` provides special capabilities to get properties of your text field, including `width`, `height`, `font-size`, `font-family` and others.
 
 The `powerbi.TextMeasurementService` module exposes the following methods:
-
+```TypeScript
     function measureSvgTextWidth(textProperties: powerbi.TextProperties): number;
     function measureSvgTextHeight(textProperties: powerbi.TextProperties): number;
     function estimateSvgTextHeight(textProperties: powerbi.TextProperties): number;
@@ -11,9 +11,9 @@ The `powerbi.TextMeasurementService` module exposes the following methods:
     function getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string;     
     function svgEllipsis(textElement: SVGTextElement, maxWidth: number): void;      
     function wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding?: number): void;
-
+```
 Where `powerbi.TextProperties` interface is defined as following:
-
+```TypeScript
     interface TextProperties {
         text?: string;
         fontFamily: string;
@@ -22,17 +22,17 @@ Where `powerbi.TextProperties` interface is defined as following:
         fontStyle?: string;
         whiteSpace?: string;
     }
-
+```
 ## measureSvgTextWidth
 This method measures the width of the text with the given SVG text properties.
-
+```TypeScript
     powerbi.TextMeasurementService.measureSvgTextWidth(textProperties: powerbi.TextProperties): number
-
+```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
-
+```TypeScript
     let textProperties: powerbi.TextProperties = {
         text: "Microsoft PowerBI",
         fontFamily: "sans-serif",
@@ -42,17 +42,17 @@ This method measures the width of the text with the given SVG text properties.
     powerbi.TextMeasurementService.measureSvgTextWidth(textProperties);
 
     // returns: 194.71875
-
+```
 ## measureSvgTextHeight
 This method measures the height of the text with the given SVG text properties.
-
+```TypeScript
     powerbi.TextMeasurementService.measureSvgTextHeight(textProperties: powerbi.TextProperties): number
-
+```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
-
+```TypeScript
     let textProperties: powerbi.TextProperties = {
         text: "Microsoft PowerBI",
         fontFamily: "sans-serif",
@@ -62,17 +62,17 @@ This method measures the height of the text with the given SVG text properties.
     powerbi.TextMeasurementService.measureSvgTextHeight(textProperties);
 
     // returns: 27
-
+```
 ## estimateSvgTextHeight
 This method estimates the height of the text with the given SVG text properties.
-
+```TypeScript
     powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties: powerbi.TextProperties): number
-
+```
 **Parameters:**
 * **textProperties:** The text properties to use for text measurement.
 
 **Example:**
-
+```TypeScript
     let textProperties: powerbi.TextProperties = {
         text: "Microsoft PowerBI",
         fontFamily: "sans-serif",
@@ -82,17 +82,17 @@ This method estimates the height of the text with the given SVG text properties.
     powerbi.TextMeasurementService.estimateSvgTextHeight(textProperties);
 
     // returns: 27
-
+```
 ## measureSvgTextElementWidth
 This method measures the width of the svgElement.
-
+```TypeScript
     powerbi.TextMeasurementService.measureSvgTextElementWidth(svgElement: SVGTextElement): number
-
+```
 **Parameters:**
 * **measureSvgTextElementWidth:** The SVGTextElement to be measured (interface [lib.d.ts](https://github.com/clausreinke/typescript-tools/blob/master/bin/lib.d.ts#L13634)).
 
 **Example:**
-
+```TypeScript
     let svg: D3.Selection = d3.select("body").append("svg");
 
     svg.append("text")
@@ -111,17 +111,17 @@ This method measures the width of the svgElement.
     powerbi.TextMeasurementService.measureSvgTextElementWidth(textElement[0][0]);
 
     // returns: 194.71875
-
+```
 ## getMeasurementProperties
 This method fetches the text measurement properties of the given DOM element.
-
+```TypeScript
     powerbi.TextMeasurementService.getMeasurementProperties(element: JQuery): powerbi.TextProperties
-
+```
 **Parameters:**
 * **element:** The selector for the DOM Element (interface [jquery.d.ts](https://github.com/Microsoft/PowerBI-visuals/blob/master/src/Clients/Typedefs/jquery/jquery.d.ts#L1262)).
 
 **Example:**
-
+```TypeScript
     let element: JQuery = $(document.createElement("div"));
 
     element.text("Microsoft PowerBI");
@@ -148,17 +148,17 @@ This method fetches the text measurement properties of the given DOM element.
             "whiteSpace": "nowrap"
         }
     */
-
+```
 ## getSvgMeasurementProperties
 This method fetches the text measurement properties of the given SVG text element.
-
+```TypeScript
     powerbi.TextMeasurementService.getSvgMeasurementProperties(svgElement: SVGTextElement): powerbi.TextProperties
-
+```
 **Parameters:**
 * **svgElement:** The SVGTextElement to be measured (interface [lib.d.ts](https://github.com/clausreinke/typescript-tools/blob/master/bin/lib.d.ts#L13634)).
 
 **Example:**
-
+```TypeScript
     let svg: D3.Selection = d3.select("body").append("svg");
 
     svg.append("text")
@@ -186,19 +186,19 @@ This method fetches the text measurement properties of the given SVG text elemen
             "whiteSpace": "nowrap"
         }
     */
-
+```
 ## getTailoredTextOrDefault
 Compares labels text size to the available size and renders ellipses when the available size is smaller.
-
+```TypeScript
     powerbi.TextMeasurementService.getTailoredTextOrDefault(properties: powerbi.TextProperties, maxWidth: number): string
-
+```
 **Parameters:**
 
 * **properties**: The text properties (including text content) to use for text measurement.
 * **maxWidth**: The maximum width available for rendering the text.
 
 **Example:**
-
+```TypeScript
     let textProperties: powerbi.TextProperties = {
         text: "Microsoft PowerBI!",
         fontFamily: "sans-serif",
@@ -208,18 +208,18 @@ Compares labels text size to the available size and renders ellipses when the av
     powerbi.TextMeasurementService.getTailoredTextOrDefault(textProperties, 75);
 
     // returns: Micr…
-
+```
 ## svgEllipsis
 Compares labels text size to the available size and renders ellipses when the available size is smaller.
-
+```TypeScript
     powerbi.TextMeasurementService.svgEllipsis(textElement: SVGTextElement, maxWidth: number): void
-
+```
 **Parameters:**
 * **textElement:** The SVGTextElement containing the text to render.
 * **maxWidth:** The maximum width available for rendering the text.
 
 **Example:**
-
+```TypeScript
     let svg: D3.Selection = d3.select("body").append("svg");
     
     svg.append("text")
@@ -251,12 +251,12 @@ Compares labels text size to the available size and renders ellipses when the av
             </body>
         </html>
     */
-
+```
 ## wordBreak
 Word break textContent of `<text>` SVG element into `<tspan>s`. Each tspan will be the height of a single line of text.
-
+```TypeScript
     powerbi.TextMeasurementService.wordBreak(textElement: SVGTextElement, maxWidth: number, maxHeight: number, linePadding: number = 0): void
-
+```
 **Parameters:**
 
 * **textElement:** The SVGTextElement containing the text to wrap.
@@ -265,7 +265,7 @@ Word break textContent of `<text>` SVG element into `<tspan>s`. Each tspan will 
 * **linePadding:** Padding to add to line height. [Optional]
 
 **Example:**
-
+```TypeScript
     let svg: D3.Selection = d3.select("body").append("svg");
 
     svg.append("text")
@@ -300,3 +300,4 @@ Word break textContent of `<text>` SVG element into `<tspan>s`. Each tspan will 
             </body>
         </html>
     */
+```
