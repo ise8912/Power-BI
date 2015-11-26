@@ -1,14 +1,16 @@
 ###Overview
 Most of visuals allow selecting some parts of them. For example, in Stacked Column chart you can select particular bar:
 ####Image 1 
-In this example you can see that column is selected. Also some visuals support multiple selection:
+In this example you can see that first column "Cat1" is selected. Also some visuals support multiple selection:
 ####Image 2
 
-In order to track selected items for your visual, you have to track identities of selected items and fire appropriate event handlers when selection changes. SelectionManager class encapsulates this functionality and exposes methods to manage selected items.
+In order to track selected items for your visual, you have to store identities of selected items and fire appropriate event handlers when selection changes. SelectionManager class encapsulates this functionality and exposes methods to manage selected items.
 ###How to use
-1.    Create SelectionManager instance in your visual class. Usually this is done in `init` function:
+1.    Pass IVisualHostServices object to the SelectionManager constructor and create SelectionManager instance in your visual class. Usually this is done in `init` function:
 
     ```typescript
+    private selectionManager: SelectionManager;
+    ...
     public init(options: VisualInitOptions): void {
                 this.selectionManager = new SelectionManager({ hostServices: options.host });
                 ...
