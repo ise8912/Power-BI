@@ -7,6 +7,10 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 4. [Creating an IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/Hello-IVisual)
 5. [Debugging](https://github.com/Microsoft/PowerBI-visuals/wiki/Debugging)
 6. [FAQs](https://github.com/Microsoft/PowerBI-visuals/wiki/FAQs)
+7. [Text Measurement Service](https://github.com/Microsoft/PowerBI-visuals/wiki/Text-Measurement-Service)
+8. [Tooltip Services](https://github.com/Microsoft/PowerBI-visuals/wiki/Tooltip-Services)
+9. [Value Formatter](https://github.com/Microsoft/PowerBI-visuals/wiki/Value-Formatter)
+10. [Selection Manager](https://github.com/Microsoft/PowerBI-visuals/wiki/Selection-Manager)
 
 ### Running Visuals in a single page html
 1. [Basics] (https://github.com/Microsoft/PowerBI-visuals/wiki/Displaying-visuals-in-a-single-html-page)
