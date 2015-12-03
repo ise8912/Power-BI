@@ -2,7 +2,7 @@ Here are a few links to get you started. If you are new to Powerbi-visuals, we r
 
 ### Getting Started
 1. [IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/IVisual-Introduction)
-2. [DataView - Lifebood of Power BI visuals](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
+2. [DataView - Lifeblood of Power BI visuals](https://github.com/Microsoft/PowerBI-visuals/wiki/DataView-Introduction)
 3. [Capabilities](https://github.com/Microsoft/PowerBI-visuals/wiki/Capabilities)
 4. [Creating an IVisual](https://github.com/Microsoft/PowerBI-visuals/wiki/Hello-IVisual)
 5. [Debugging](https://github.com/Microsoft/PowerBI-visuals/wiki/Debugging)
