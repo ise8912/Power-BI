@@ -31,4 +31,8 @@ Hit continue and start debugging. And that's it.
 
 ![debug](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/resources/debugging/debugging_details.png)
 
+###URL query parameter###
 
+To avoid having to select the visual over and over again after refreshing the playground page, a `visual` query parameter can be set in the URL. For instance, to select the bar chart by default:
+
+[http://localhost:52242/src/Clients/PowerBIVisualsPlayground/index.html?visual=barChart]()
