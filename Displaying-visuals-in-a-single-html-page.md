@@ -18,7 +18,7 @@ Here is an example of how to create a DataView:
 var createDataView = function () {
     var DataViewTransform = powerbi.data.DataViewTransform;
 
-    var fieldExpr = powerbi.data.SQExprBuilder.fieldDef({entity: 'table1', column: 'country'});
+    var fieldExpr = powerbi.data.SQExprBuilder.fieldExpr({ column: { entity: "table1", name: "country" } });
 
     var categoryValues = ["Australia", "Canada", "France", "Germany", "United Kingdom", "United States"];
     var categoryIdentities = categoryValues.map(function (value) {
@@ -184,7 +184,7 @@ This is the complete example created from the steps above
     var createDataView = function () {
         var DataViewTransform = powerbi.data.DataViewTransform;
 
-        var fieldExpr = powerbi.data.SQExprBuilder.fieldDef({entity: 'table1', column: 'country'});
+        var fieldExpr = powerbi.data.SQExprBuilder.fieldExpr({ column: { entity: "table1", name: "country" } });
 
         var categoryValues = ["Australia", "Canada", "France", "Germany", "United Kingdom", "United States"];
         var categoryIdentities = categoryValues.map(function (value) {
