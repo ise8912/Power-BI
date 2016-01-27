@@ -188,4 +188,6 @@ tooltipInfo: [
                 }
              ],
 ```
-in this example all values of y category will be formatted as numbers
+in this example all values of y category will be formatted as numbers.
+
+When you are creating your visual, note that format string will be provided in data view. 
