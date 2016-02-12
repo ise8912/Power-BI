@@ -25,6 +25,8 @@ In order to track selected items for your visual and apply cross-filtering to ot
 2.    Update list of selected items. Usually visual blocks are selected by mouse click:
 
     ```typescript
+var selection = d3.selectAll('g'); // Adjust as necessary.
+
 selection
     .on('click', function (d) {
         selectionManager.select(d.data.selector).then((ids) => {
