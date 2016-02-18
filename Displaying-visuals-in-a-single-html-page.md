@@ -2,8 +2,7 @@
 
 ```html
 <link href="visuals.css" rel="stylesheet">
-<script type="text/javascript" src="externals.min.js"></script>  
-<script type="text/javascript" src="powerbi-visuals.js"></script>   
+<script type="text/javascript" src="powerbi-visuals.all.min.js"></script>  
 ```
 
 ### Create a DataView
@@ -145,15 +144,21 @@ visual.init({
     animation: { transitionImmediate: true }
 });
 
-// Call update to draw the visual with some data
-visual.update({
-    dataViews: [createDataView()] ,
-    viewport: {
-        height: height,
-        width: width
-    },
-    duration: 0
-});
+var dataViews = [createDataView()],
+	viewport = { height: height, width: width };
+
+if (visual.update) {
+	// Call update to draw the visual with some data
+	visual.update({
+		dataViews: dataViews,
+		viewport: viewport,
+		duration: 0
+	});
+} else if (visual.onDataChanged && visual.onResizing) {
+	// Call onResizing and onDataChanged (old API) to draw the visual with some data
+	visual.onResizing(viewport);
+	visual.onDataChanged({ dataViews: dataViews });
+}
 ```
 
 ### Putting it all together
@@ -168,8 +173,7 @@ This is the complete example created from the steps above
     <title></title>
 
     <link href="visuals.css" rel="stylesheet">
-    <script type="text/javascript" src="externals.min.js"></script>  
-    <script type="text/javascript" src="powerbi-visuals.js"></script>  
+    <script type="text/javascript" src="powerbi-visuals.all.min.js"></script>  
     <style>
         .visual {
             'background-color' : 'white',
@@ -301,15 +305,21 @@ This is the complete example created from the steps above
             animation: { transitionImmediate: true }
         });
 
-        // Call update to draw the visual with some data
-        visual.update({
-            dataViews: [createDataView()] ,
-            viewport: {
-                height: height,
-                width: width
-            },
-            duration: 0
-        });
+        var dataViews = [createDataView()],
+            viewport = { height: height, width: width };
+
+        if (visual.update) {
+            // Call update to draw the visual with some data
+            visual.update({
+                dataViews: dataViews,
+                viewport: viewport,
+                duration: 0
+            });
+        } else if (visual.onDataChanged && visual.onResizing) {
+            // Call onResizing and onDataChanged (old API) to draw the visual with some data
+            visual.onResizing(viewport);
+            visual.onDataChanged({ dataViews: dataViews });
+        }
     }
     createVisual();
 
